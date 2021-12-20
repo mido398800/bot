@@ -86,7 +86,7 @@ with TelegramClient(StringSession("1BJWap1wBuwuaFM--lpYy3YWphrn5IO2gVwb0lwQUIAVA
                 rr = rr + 1
         neme = 'Scraped1/%s_Scrapped.txt'% chanil
         print(neme)
-        texti = open(neme, 'a')
+        texti = open(neme, 'a+')
         #default
         if "|" in cc:
             cc = cc.split('\n')
