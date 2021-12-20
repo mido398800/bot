@@ -163,7 +163,7 @@ content = set([line for line in content if line != ''])
 
 content = '\n'.join(content)
 
-with open('Scraped1/%s_Scrapped.txt'% chanil, 'w') as fl:
+with open('Scraped1/%s_Scrapped.txt'% chanil, 'w+') as fl:
     fl.writelines(content)
 # replace XXXX.. with your token
 TOKEN = '2082814545:AAFAFzWgO1bxtJSwBRTPu3DpcRfm3zUWWQA'
