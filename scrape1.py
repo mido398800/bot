@@ -30,8 +30,7 @@ if apis == []:
 elif len(apis) == 2:
     api_id = int(apis[0])
     api_hash = apis[1]
-    print ("\033[35mApi\033[37mId: " + "\033[35m" + str(api_id))
-    print ("\033[35mApi\033[37mHash: " + "\033[35m" + api_hash) 
+
    
     
     
@@ -85,7 +84,7 @@ with TelegramClient(StringSession("1BJWap1wBuwuaFM--lpYy3YWphrn5IO2gVwb0lwQUIAVA
             else:
                 rr = rr + 1
         neme = 'Scraped1/%s_Scrapped.txt'% chanil
-        print(neme)
+      
         texti = open(neme, 'a+')
         #default
         if "|" in cc:
