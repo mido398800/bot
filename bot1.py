@@ -10,6 +10,11 @@ ADMIN_ID   = '1136754989'
 load_dotenv()
 token = os.getenv(AUTH_TOKEN)
 bot = telebot.TeleBot(AUTH_TOKEN,parse_mode="MARKDOWN")
+
+def main():
+
+	bot.polling()
+	
 @bot.message_handler()
 
 def greet(message):
@@ -30,7 +35,7 @@ def greet(message):
 		
 	######################################################  
 		if "/start" == str(text) :                       #WELCOME_MESSAGE
-			bot.reply_to(message.chat.id, start)     #WELCOME_MESSAGE
+			bot.send_message(message.chat.id, start)     #WELCOME_MESSAGE
 	######################################################
 
 
@@ -44,7 +49,7 @@ def greet(message):
 			is_channel = r.get("https://t.me/"+str(sc_user)).text
 			key_check  = '<meta property="og:description" content="">'
 			if key_check not in is_channel and text != "/sc" and "members" in is_channel or "subscribers" in is_channel:
-				bot.reply_to(message.chat.id, scraping)
+				bot.send_message(message.chat.id, scraping)
 				co_1   = 'timeout 400 python3 scrape1.py ' + str(sc_user) + " " + str(from_id) + " &"
 				co_2   = 'timeout 420 python3 send.py ' + str(sc_user) + " " + str(from_id) + " &"
 				os.system(co_1)
@@ -52,6 +57,9 @@ def greet(message):
 				
 			
 ######################################################
-bot.infinity_polling()
+
+if __name__ == '__main__':
+	main()
+
 ####################################
 
