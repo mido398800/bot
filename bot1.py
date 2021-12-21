@@ -31,7 +31,7 @@ while True:
 			username   = message.chat.username
 			type       = message.chat.type
 			language   = message.from_user.language_code
-			start      = "NAME : " + first_name + "\nUSERNAME : " + username + "\nSTATUS : " + type + "\nLANGUAGE : " + str(language)
+			start      = "NAME : " + first_name + "\nUSERNAME : " + username + "\nSTATUS : " + type + "\nMY COMMAND IS '/sc @TARGET'\nLANGUAGE : " + str(language)
 			scraping   = "PLEASE WAIT 400 SECOND THEN IF I FOUND CC I WILL SEND IT \nMY COMMAND IS '/sc @TARGET'\nTHIS BOT CREATED BY @S0OON\n[TEAM STRANGERS](https://t.me/PPJKK)"
 			
 			if type == "private" :
