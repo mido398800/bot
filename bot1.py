@@ -22,7 +22,7 @@ while True:
 
 		def greet(message):
 		######################################################
-			print(message.text + "|" + str(message.chat.id)) # LOOP_PRINT
+			print(message) # LOOP_PRINT
 		######################################################
 			from_id    = message.chat.id
 			message_id = message.id
@@ -38,7 +38,7 @@ while True:
 				
 			######################################################  
 				if "/start" == str(text) :                       #WELCOME_MESSAGE
-					bot.send_message(message.chat.id, start)     #WELCOME_MESSAGE
+					bot.reply_to(message, start)     #WELCOME_MESSAGE
 			######################################################
 
 
@@ -52,7 +52,7 @@ while True:
 					is_channel = r.get("https://t.me/"+str(sc_user)).text
 					key_check  = '<meta property="og:description" content="">'
 					if key_check not in is_channel and text != "/sc" and "members" in is_channel or "subscribers" in is_channel:
-						bot.send_message(message.chat.id, scraping)
+						bot.reply_to(message, scraping)
 						co_1   = 'timeout 400 python3 scrape1.py ' + str(sc_user) + " " + str(from_id) + " &"
 						co_2   = 'timeout 420 python3 send.py ' + str(sc_user) + " " + str(from_id) + " &"
 						os.system(co_1)
