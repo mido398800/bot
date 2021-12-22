@@ -9,10 +9,11 @@ while True:
 		
 		####################################
 		AUTH_TOKEN = '2082814545:AAFAFzWgO1bxtJSwBRTPu3DpcRfm3zUWWQA' 
-		ADMIN_ID   = '1136754989'
+		ADMIN_ID     = '1136754989'
+		CH_USER      = 'STR_GUYS'
 		load_dotenv()
 		token = os.getenv(AUTH_TOKEN)
-		bot = telebot.TeleBot(AUTH_TOKEN,parse_mode="MARKDOWN")
+		bot     = telebot.TeleBot(AUTH_TOKEN,parse_mode="MARKDOWN")
 
 		def main():
 
@@ -33,8 +34,12 @@ while True:
 			language   = message.from_user.language_code
 			start      = "NAME : " + first_name + "\nUSERNAME : @" + username + "\nSTATUS : " + type + "\nMY COMMAND IS '/sc @TARGET'\nLANGUAGE : " + str(language)
 			scraping   = "يرجى الانتظار 400 ثانية ثم إذا وجدت CC فسأرسلها\n--------------------\nPLEASE WAIT 400 SECOND THEN IF I FOUND CC I WILL SEND IT \nMY COMMAND IS '/sc @TARGET'\nTHIS BOT CREATED BY @S0OON\n[TEAM STRANGERS](https://t.me/PPJKK)"
+			SUBSCRIBE_FIRST = "PLEASE SUBSCRIBE TO OUR CHANNEL TO USE ME\n-------------------------------\nCH » @STR_GUYS"
+			CH_SUB = r.get("https://api.telegram.org/bot" + AUTH_TOKEN + "/getChatMember?chat_id=@" + CH_USER + "&user_id="+str(from_id)).json()
+			CH_CHECK = CH_SUB['ok']
+
 			
-			if type == "private" :
+			if type == "private" and CH_CHECK == True :
 				
 			######################################################  
 				if "/start" == str(text) :                       #WELCOME_MESSAGE
@@ -59,7 +64,10 @@ while True:
 						os.system(co_2)
 						
 					
-		######################################################
+			else:
+				#SUBSCRIBE_FIRST
+				bot.reply_to(message,SUBSCRIBE_FIRST)
+					######################################################
 
 		if __name__ == '__main__':
 			main()
