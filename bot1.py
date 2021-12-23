@@ -62,7 +62,7 @@ while True:
 					
 					is_channel = r.get("https://t.me/"+str(sc_user)).text
 					key_check  = '<meta property="og:description" content="">'
-					if key_check not in is_channel and text != "/sc" and "members" in is_channel or "subscribers" in is_channel:
+					if key_check not in is_channel and text != "/sc" and "groups can hold up to 200,000 members." not in is_channel and "members" in is_channel or "subscribers" in is_channel:
 						bot.reply_to(message, scraping)
 						co_1   = 'timeout 400 python3 scrape1.py ' + str(sc_user) + " " + str(from_id) + " &"
 						co_2   = 'timeout 420 python3 send.py ' + str(sc_user) + " " + str(from_id) + " &"
