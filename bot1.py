@@ -44,7 +44,7 @@ while True:
 			print("STATUS : " + CH_CHECK + " STATUS2 : " + CH_CHECK2)
 
 			
-			if type == "private" and CH_CHECK == 'member' and CH_CHECK2 == 'member' :
+			if type == "private" and CH_CHECK != 'kicked' and CH_CHECK2 != 'left' :
 				
 			######################################################  
 				if "/start" == str(text) :                       #WELCOME_MESSAGE
