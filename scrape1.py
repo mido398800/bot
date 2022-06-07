@@ -16,8 +16,8 @@ except:
     apis = apiss.readlines()
 
 if apis == []:
-    api_id = 1542559
-    api_hash = "2ce1cecac6330f90c7d4e71c7def52f8"
+    api_id = 18038024
+    api_hash = "8d4cb49dd973e2a4c1b48e320ab36b99"
     api_id = int(str(api_id).replace(' ',''))
     api_hash = api_hash.replace(' ','')
     apiss = open('api.txt', 'w')
@@ -46,7 +46,7 @@ clord = 0
 
 chanil = sys.argv[1]
 chanil = chanil.replace('@','')
-with TelegramClient(StringSession("1BJWap1wBuwuaFM--lpYy3YWphrn5IO2gVwb0lwQUIAVAKDRnghgeESq4xFtT-73c54HP4DO_tIV-btByGc_nuUfFzQSqrGhT_IM8BcrvJbQ_i4En80p2dfvVLYXyCPnXJFYePNASHgZHApmT0pfLiAzp55H9aT-I3uDUMMQv7Dm3DnnZdEotYvlxrukHYNtYZa_M7qkfj9JXc2dACm-I2MpkZ4nGscopRWAkmn8CQxxYBRgrhWW53AlPns0XRaZk2BO8jQaQv3ZPO2IAAlbnTq_FWYzfFbOCa1EtBEAjPGAi8yj7-oxjcxsuJQkiCyLZFGy2JcEyq6EL3WVtUhqy5Tk7o-Au4EA="), api_id, api_hash) as client:
+with TelegramClient(StringSession("BQCBLx-EeR6y1a3nE7EmMACvx0UdGuIVmXHCrgsz46yU8jB-5KGwx8MdG8Fr37Hd-oqqSnd14oANjaS8q7N52aSLxnGoSerhUHZLeTozUVjcJ253mycuG-hfw8MQ530UP8qElnpiWtn4GX7id8rHGvvpYECj8ARrA6Z_wklVPzrHnzKR8R6Wdj4RWgEGypx9RQ-lRN-0rdgGSVS34ANXowqkFS9o-VOsJ0Ax7x95wUY0gAYx-Wke1dhmljPSfF2Tg7wG4uuV0gkSMlDy0fMqciCXwtftWBskCdFQZ-Pn7t6ts0hjsGT1ALdH2OwiUfZR-29D3V1-XmTEDoACJaSpxP_AAAAAAUvlBeUA"), api_id, api_hash) as client:
   
     for message in client.iter_messages(chanil):
         msg = str(message.text)
