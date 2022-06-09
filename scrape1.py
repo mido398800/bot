@@ -46,7 +46,7 @@ clord = 0
 
 chanil = sys.argv[1]
 chanil = chanil.replace('@','')
-with TelegramClient(StringSession("BQCBLx-EeR6y1a3nE7EmMACvx0UdGuIVmXHCrgsz46yU8jB-5KGwx8MdG8Fr37Hd-oqqSnd14oANjaS8q7N52aSLxnGoSerhUHZLeTozUVjcJ253mycuG-hfw8MQ530UP8qElnpiWtn4GX7id8rHGvvpYECj8ARrA6Z_wklVPzrHnzKR8R6Wdj4RWgEGypx9RQ-lRN-0rdgGSVS34ANXowqkFS9o-VOsJ0Ax7x95wUY0gAYx-Wke1dhmljPSfF2Tg7wG4uuV0gkSMlDy0fMqciCXwtftWBskCdFQZ-Pn7t6ts0hjsGT1ALdH2OwiUfZR-29D3V1-XmTEDoACJaSpxP_AAAAAAUvlBeUA"), api_id, api_hash) as client:
+with TelegramClient(StringSession("1BVtsOMUBux3CW-qa2zeIncrIAwBii7-a9qaYFlpXHIZAEY8WwuNbyMp-KPj4D2NQ-xpiIZyoA3syW8io1U9e2wgmWrUXBhrVwaZhjW4wnnF60RWQaLDXsiV5yKKovlLPDFfbpcyiHeUuza7kJzdaCrd4fKrEBv6yR5ByJjrlQxyhS5w2z-Q-DUkjexlHZ31Rhq6HUStMxRd6TdXzBjN3kWPF5NHL2St26dsEPJkWVP0C2Q3nstF_9Ea5ZGjIXvMzU6ovEIniuBO59WvRO1FGRJm71eHeiEPIFQUTNHwpRy9zf8LMrS5EoUpm044X6zlUld1VJ2ifk5Y95eH4ctZlhrX83p_OrjA="), api_id, api_hash) as client:
   
     for message in client.iter_messages(chanil):
         msg = str(message.text)
