@@ -35,7 +35,7 @@ while True:
 			type       = message.chat.type
 			language   = message.from_user.language_code
 			sc_user    = text.replace("/cc @",'')
-			start      = "HELLO , I CAN SCRAPE CC FROM GROUPS AND CHANNELS \nJUST SEND THE COMMAND\nLIKE : /cc @USER\nAND IF I FOUND ANY CC I WILL SEND IT IN A COMBO FILE\nI CREATED BY @S0OON"
+			start      = "HELLO , I CAN SCRAPE CC FROM GROUPS AND CHANNELS \nJUST SEND THE COMMAND\nLIKE : /sc @USER\nAND IF I FOUND ANY CC I WILL SEND IT IN A COMBO FILE\nI CREATED BY @S0OON"
 			scraping   = "يرجى الانتظار 400 ثانية ثم إذا وجدت CC فسأرسلها\n--------------------\nPLEASE WAIT 400 SECOND THEN IF I FOUND CC I WILL SEND IT \nMY COMMAND IS '/sc @TARGET'\nTHIS BOT CREATED BY @S0OON\n[TEAM STRANGERS](https://t.me/PPJKK)"
 			SUBSCRIBE_FIRST = "PLEASE SUBSCRIBE TO OUR CHANNEL TO USE ME\n-----------------------------------------------\nCH » @STR\_GUYS AND @PPJKK"
 			CH_SUB = r.get("https://api.telegram.org/bot" + AUTH_TOKEN + "/getChatMember?chat_id=@" + CH_USER + "&user_id=" + str(from_id)).json()
