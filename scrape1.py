@@ -165,7 +165,7 @@ content = '\n'.join(content)
 with open('Scraped1/%s_Scrapped.txt'% chanil, 'w+') as fl:
     fl.writelines(content)
 # replace XXXX.. with your token
-TOKEN = '2082814545:AAFAFzWgO1bxtJSwBRTPu3DpcRfm3zUWWQA'
+TOKEN = '2082814545:AAH-02xB0gcS--2PCbLEsj3fdZppWQynbMg'
 bot = telepot.Bot(TOKEN)
 file='Scraped1/%s_Scrapped.txt'% chanil
 bot.sendDocument(chat_id=sys.argv[2], document=open(file, 'rb'))
