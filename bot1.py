@@ -34,9 +34,9 @@ while True:
 			username   = message.chat.username
 			type       = message.chat.type
 			language   = message.from_user.language_code
-			sc_user    = text.replace("/sc @",'')
-			start      = "HELLO , I CAN SCRAPE CC FROM GROUPS AND CHANNELS \nJUST SEND THE COMMAND\nLIKE : /sc @USER\nAND IF I FOUND ANY CC I WILL SEND IT IN A COMBO FILE\nI CREATED BY @S0OON"
-			scraping   = "يرجى الانتظار 400 ثانية ثم إذا وجدت CC فسأرسلها\n--------------------\nPLEASE WAIT 400 SECOND THEN IF I FOUND CC I WILL SEND IT \nMY COMMAND IS '/sc @TARGET'\nTHIS BOT CREATED BY @S0OON\n[TEAM STRANGERS](https://t.me/PPJKK)"
+			sc_user    = text.replace("/cc @",'')
+			start      = "HELLO , I CAN SCRAPE CC FROM GROUPS AND CHANNELS \nJUST SEND THE COMMAND\nLIKE : /cc @USER\nAND IF I FOUND ANY CC I WILL SEND IT IN A COMBO FILE\nI CREATED BY @S0OON"
+			scraping   = "يرجى الانتظار 400 ثانية ثم إذا وجدت CC فسأرسلها\n--------------------\nPLEASE WAIT 400 SECOND THEN IF I FOUND CC I WILL SEND IT \nMY COMMAND IS '/cc @TARGET'\nTHIS BOT CREATED BY @S0OON\n[TEAM STRANGERS](https://t.me/PPJKK)"
 			SUBSCRIBE_FIRST = "PLEASE SUBSCRIBE TO OUR CHANNEL TO USE ME\n-----------------------------------------------\nCH » @STR\_GUYS AND @PPJKK"
 			CH_SUB = r.get("https://api.telegram.org/bot" + AUTH_TOKEN + "/getChatMember?chat_id=@" + CH_USER + "&user_id=" + str(from_id)).json()
 			CH_SUB2 = r.get("https://api.telegram.org/bot" + AUTH_TOKEN + "/getChatMember?chat_id=@" + CH_USER2 + "&user_id=" + str(from_id)).json()
@@ -57,12 +57,12 @@ while True:
 
 
 
-				if "/sc @" in str(text) and text != "/sc @" and len(sc_user) >= 5 and text.count(' ') == 1:
+				if "/cc @" in str(text) and text != "/cc @" and len(sc_user) >= 5 and text.count(' ') == 1:
 		
 					
 					is_channel = r.get("https://t.me/"+str(sc_user)).text
 					key_check  = '<meta property="og:description" content="">'
-					if key_check not in is_channel and text != "/sc" and "groups can hold up to 200,000 members." not in is_channel and "members" in is_channel or "subscribers" in is_channel:
+					if key_check not in is_channel and text != "/cc" and "groups can hold up to 200,000 members." not in is_channel and "members" in is_channel or "subscribers" in is_channel:
 						bot.reply_to(message, scraping)
 						co_1   = 'timeout 400 python3 scrape1.py ' + str(sc_user) + " " + str(from_id) + " &"
 						co_2   = 'timeout 420 python3 send.py ' + str(sc_user) + " " + str(from_id) + " &"
