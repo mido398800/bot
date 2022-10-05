@@ -15,6 +15,7 @@ os.system("pip install html5lib")
 os.system("clear")
 import requests as r
 import json
+import sys
 import urllib.request as req
 from bs4 import BeautifulSoup
 import html5lib
