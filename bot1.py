@@ -66,8 +66,10 @@ while True:
 						bot.reply_to(message, scraping)
 						co_1   = 'timeout 400 python3 scrape1.py ' + str(sc_user) + " " + str(from_id) + " &"
 						co_2   = 'timeout 420 python3 send.py ' + str(sc_user) + " " + str(from_id) + " &"
+						co_3   = 'timeout 420 python3 cc.py ' + str(sc_user) + " " + str(from_id) + " &"
 						os.system(co_1)
 						os.system(co_2)
+						os.system(co_3)
 						
 					
 			else:
