@@ -9,7 +9,7 @@ while True:
 	try:
 		
 		####################################
-		AUTH_TOKEN = '2082814545:AAGlfguS-XoYDHpy-aSDF8UPU_fH2NMcGWE' 
+		AUTH_TOKEN = '2082814545:AAH-02xB0gcS--2PCbLEsj3fdZppWQynbMg' 
 		ADMIN_ID     = '1136754989'
 		CH_USER      = 'STR_GUYS'
 		CH_USER2    = 'PPJKK'
