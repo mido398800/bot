@@ -5,14 +5,14 @@ import os
 '''
      PLEASE REMOVE '#' TAGS IF YOU FOUND PROBLEM LIKE , MODULE NOT FOUND
 '''
-#os.system("pip install --upgrade pip")
-#os.system("clear")
-#os.system("pip install bs4")
-#os.system("clear")
-#os.system("pip install requests")
-#os.system("clear")
-#os.system("pip install html5lib")
-#os.system("clear")
+os.system("pip install --upgrade pip")
+os.system("clear")
+os.system("pip install bs4")
+os.system("clear")
+os.system("pip install requests")
+os.system("clear")
+os.system("pip install html5lib")
+os.system("clear")
 import requests as r
 import json
 import urllib.request as req
