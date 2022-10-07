@@ -60,6 +60,8 @@ for nm in range(line_count):
 	from bs4 import BeautifulSoup
 	soup = BeautifulSoup(send.text)
 	text = soup.get_text()
+	print(send.text)
+
 	import urllib
 	if  "#CHARGED" in send.text  and  "http" not in send.text or "card_error" in send.text:
 
