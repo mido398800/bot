@@ -56,7 +56,7 @@ for nm in range(line_count):
 	cc = ' '.join([str(elem) for elem in s])
 	session = r.Session()
 	session.verify = False
-	send=session.get(url="https://utsfv.com/pv/ck.php?lista=" + cc + "&sec=undefined&amount=1".replace(' ','%').replace("|","%7C"))
+	send=session.get(url="https://utsfv.com/dead/ck.php?lista=" + cc + "&sec=undefined&amount=1".replace(' ','%').replace("|","%7C"))
 	from bs4 import BeautifulSoup
 	soup = BeautifulSoup(send.text)
 	text = soup.get_text()
